@@ -32,12 +32,25 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         //new JsonTask(this).execute(JSON_URL);
+
+        testingFunction();
+    }
+
+    public void testingFunction() {
+        animals.add(new Animal("Elefant","Animalia","Mammalia","Proboscidea","Elephantidae","a\na\na\na\na\na\na\na\nb\nb\nb\nb\nb\n"));
+        animals.add(new Animal("Elefant","Animalia","Mammalia","Proboscidea","Elephantidae","a\na\na\na\na\na\na\na\nb\nb\nb\nb\nb\n"));
+        animals.add(new Animal("Elefant","Animalia","Mammalia","Proboscidea","Elephantidae","a\na\na\na\na\na\na\na\nb\nb\nb\nb\nb\n"));
+        animals.add(new Animal("Elefant","Animalia","Mammalia","Proboscidea","Elephantidae","a\na\na\na\na\na\na\na\nb\nb\nb\nb\nb\n"));
+        animals.add(new Animal("Elefant","Animalia","Mammalia","Proboscidea","Elephantidae","a\na\na\na\na\na\na\na\nb\nb\nb\nb\nb\n"));
+        customAdapter.updateAnimals(animals);
+        customAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void onPostExecute(String json) {
         Type type = new TypeToken<ArrayList<Animal>>() {}.getType();
         animals = gson.fromJson(json, type);
+        customAdapter.updateAnimals(animals);
         customAdapter.notifyDataSetChanged();
     }
 }

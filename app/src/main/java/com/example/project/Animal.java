@@ -4,6 +4,16 @@ public class Animal {
 
     String ID, login, name, kingdom, aclass, order, family, description;
 
+    //temporary.
+    public Animal(String name, String kingdom, String aclass, String order, String family, String description) {
+        this.name = name;
+        this.kingdom = kingdom;
+        this.aclass = aclass;
+        this.order = order;
+        this.family = family;
+        this.description = description;
+    }
+
     public String getID() {
         return ID;
     }
