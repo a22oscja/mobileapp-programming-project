@@ -17,7 +17,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         this.animals = animals;
     }
 
-    public void updateAnimals(ArrayList<Animal> animals){ this.animals = animals};
+    public void updateAnimals(ArrayList<Animal> animals){ this.animals = animals;};
 
     @NonNull
     @Override
