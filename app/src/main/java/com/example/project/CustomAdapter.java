@@ -29,6 +29,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         Animal a = animals.get(position);
+        holder.title.setText(a.getName());
+        holder.kingdom.setText(a.getKingdom());
+        holder.aclass.setText(a.getAclass());
+        holder.order.setText(a.getOrder());
+        holder.description.setText(a.getDescription());
     }
 
     @Override
