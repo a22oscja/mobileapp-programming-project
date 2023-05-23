@@ -20,7 +20,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -33,55 +33,43 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/kingdom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:paddingLeft="10dp"
-                app:layout_constraintStart_toStartOf="@+id/title"
-                app:layout_constraintTop_toBottomOf="@+id/title"
-                />
-
-            <TextView
-                android:id="@+id/aclass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                app:layout_constraintTop_toBottomOf="@+id/title"
-                app:layout_constraintStart_toEndOf="@+id/kingdom"
-                app:layout_constraintEnd_toStartOf="@id/order"/>
-            <TextView
-                android:id="@+id/order"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                app:layout_constraintTop_toBottomOf="@+id/title"
-                app:layout_constraintStart_toEndOf="@+id/aclass"
-                app:layout_constraintEnd_toStartOf="@+id/family"/>
-            <TextView
-                android:id="@+id/family"
+                android:id="@+id/size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:paddingEnd="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title"
-                app:layout_constraintStart_toEndOf="@+id/order"/>
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/location"
+                />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:paddingEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/size"
+                app:layout_constraintBottom_toTopOf="@id/scrollView"/>
 
             <ScrollView
+                android:id="@+id/scrollView"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="40dp"
                 android:padding="10dp"
+                android:paddingTop="10dp"
                 android:paddingBottom="-5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/kingdom">
+                app:layout_constraintTop_toBottomOf="@+id/name">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
 
                     <TextView
-                        android:id="@+id/description"
+                        android:textSize="15dp"
+                        android:id="@+id/funFact"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="TextView" />

@@ -29,11 +29,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         Animal a = animals.get(position);
-        holder.title.setText(a.getName());
-        holder.kingdom.setText(a.getKingdom());
-        holder.aclass.setText(a.getAclass());
-        holder.order.setText(a.getOrder());
-        holder.description.setText(a.getDescription());
+        holder.name.setText(a.getName());
+        holder.location.setText(a.getLocation());
+        holder.size.setText(a.getSize());
+        holder.funFact.setText(a.getAuxdata());
     }
 
     @Override
@@ -43,20 +42,16 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
     public class CustomViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView title;
-        public TextView kingdom;
-        public TextView aclass;
-        public TextView order;
-        public TextView family;
-        public TextView description;
+        public TextView name;
+        public TextView size;
+        public TextView location;
+        public TextView funFact;
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.title);
-            kingdom = itemView.findViewById(R.id.kingdom);
-            aclass = itemView.findViewById(R.id.aclass);
-            order = itemView.findViewById(R.id.order);
-            family = itemView.findViewById(R.id.family);
-            description = itemView.findViewById(R.id.description);
+            name = itemView.findViewById(R.id.name);
+            size = itemView.findViewById(R.id.size);
+            location = itemView.findViewById(R.id.location);
+            funFact = itemView.findViewById(R.id.funFact);
         }
     }
 }
