@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener, View.OnClickListener {
 
-    private final String JSON_URL = "";
+    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a22oscja";
     Gson gson = new Gson();
     RecyclerView recyclerView;
     ArrayList<Animal> animals = new ArrayList<Animal>();
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         customAdapter = new CustomAdapter(animals);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        //new JsonTask(this).execute(JSON_URL);
+        new JsonTask(this).execute(JSON_URL);
     }
 
     @Override
