@@ -2,7 +2,7 @@ package com.example.project;
 
 public class Animal {
 
-    String ID, Login, Name, Location, Size, Auxdata;
+    String ID, login, name, location, size, auxdata;
 
     public String getID() {
         return ID;
@@ -13,42 +13,42 @@ public class Animal {
     }
 
     public String getLogin() {
-        return Login;
+        return login;
     }
 
     public void setLogin(String login) {
-        Login = login;
+        login = login;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        name = name;
     }
 
     public String getLocation() {
-        return Location;
+        return location;
     }
 
     public void setLocation(String location) {
-        Location = location;
+        location = location;
     }
 
     public String getSize() {
-        return Size;
+        return size;
     }
 
     public void setSize(String size) {
-        Size = size;
+        size = size;
     }
 
     public String getAuxdata() {
-        return Auxdata;
+        return auxdata;
     }
 
     public void setAuxdata(String auxdata) {
-        Auxdata = auxdata;
+        auxdata = auxdata;
     }
 }

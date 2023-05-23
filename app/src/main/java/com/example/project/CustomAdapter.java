@@ -31,8 +31,17 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         Animal a = animals.get(position);
         holder.name.setText(a.getName());
         holder.location.setText(a.getLocation());
-        holder.size.setText(a.getSize());
+        holder.size.setText(a.getSize() + determineUnit(a) + " (avg)");
         holder.funFact.setText(a.getAuxdata());
+    }
+
+    public String determineUnit(Animal a){
+        if(Integer.parseInt(a.getSize()) > 5){
+            return "cm";
+        }
+        else{
+            return "m";
+        }
     }
 
     @Override
