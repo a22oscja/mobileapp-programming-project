@@ -2,17 +2,7 @@ package com.example.project;
 
 public class Animal {
 
-    String ID, login, name, kingdom, aclass, order, family, description;
-
-    //temporary.
-    public Animal(String name, String kingdom, String aclass, String order, String family, String description) {
-        this.name = name;
-        this.kingdom = kingdom;
-        this.aclass = aclass;
-        this.order = order;
-        this.family = family;
-        this.description = description;
-    }
+    String ID, Login, Name, Location, Size, Auxdata;
 
     public String getID() {
         return ID;
@@ -23,58 +13,42 @@ public class Animal {
     }
 
     public String getLogin() {
-        return login;
+        return Login;
     }
 
     public void setLogin(String login) {
-        this.login = login;
+        Login = login;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        Name = name;
     }
 
-    public String getKingdom() {
-        return kingdom;
+    public String getLocation() {
+        return Location;
     }
 
-    public void setKingdom(String kingdom) {
-        this.kingdom = kingdom;
+    public void setLocation(String location) {
+        Location = location;
     }
 
-    public String getAclass() {
-        return aclass;
+    public String getSize() {
+        return Size;
     }
 
-    public void setAclass(String aclass) {
-        this.aclass = aclass;
+    public void setSize(String size) {
+        Size = size;
     }
 
-    public String getOrder() {
-        return order;
+    public String getAuxdata() {
+        return Auxdata;
     }
 
-    public void setOrder(String order) {
-        this.order = order;
-    }
-
-    public String getFamily() {
-        return family;
-    }
-
-    public void setFamily(String family) {
-        this.family = family;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setAuxdata(String auxdata) {
+        Auxdata = auxdata;
     }
 }
